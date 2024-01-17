@@ -8,5 +8,8 @@
     "vercel": "C:\\Users\\%username%\\AppData\\Roaming\\npm\\vercel.cmd"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/postgres": "^0.5.1"
+  }
 }
