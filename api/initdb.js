@@ -3,8 +3,7 @@ import { sql } from '@vercel/postgres';
 export default async function handler(req, res) {
     try {
         await sql`CREATE TABLE IF NOT EXISTS orders (orderId serial, productId serial, quantity numeric);`;
-        await sql`ALTER TABLE orders ADD COLUMN IF NOT EXISTS productId serial;`;
-        await sql`ALTER TABLE orders ADD COLUMN IF NOT EXISTS quantity numeric;`;
+        
 
         return res.status(200).json({ status: 'success' });
     } catch (error) {
